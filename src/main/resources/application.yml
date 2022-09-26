@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/beksultan
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+springdoc:
+  swagger-ui:
+    path: /api-docs
+server:
+  error:
+    include-message: always
+    include-stacktrace: always
+app:
+  security:
+    jwt:
+      issuer: Beksultan
+      secret: it'ssecretword
+      expiresAt: 30
